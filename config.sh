@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/picom ~/.config/dunst
+mkdir -p ~/Downloads ~/Documents ~/Pictures ~/Videos ~/Music ~/Desktop
 
 curl -sL https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/fonts.sh | bash
 
@@ -17,3 +18,5 @@ chmod +x ~/.xprofile
 systemctl --user --now enable pipewire pipewire-pulse wireplumber
 sudo systemctl set-default graphical.target
 sudo systemctl enable lightdm
+
+sudo snap connect firefox:home
