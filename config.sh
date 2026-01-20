@@ -19,4 +19,7 @@ systemctl --user --now enable pipewire pipewire-pulse wireplumber
 sudo systemctl set-default graphical.target
 sudo systemctl enable lightdm
 
+sudo timedatectl set-timezone America/El_Salvador
+sudo timedatectl set-ntp true
+
 sudo snap connect firefox:home
