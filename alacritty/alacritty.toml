@@ -1,0 +1,10 @@
+[window]
+opacity = 1.0
+
+[window.padding]
+x = 15
+y = 15
+
+[font]
+normal = { family = "JetBrainsMono", style = "Regular" }
+size = 11.0

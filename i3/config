@@ -1,6 +1,7 @@
 set $mod Mod4
 
-#font pango:Inter 10
+#font pango:Ubuntu 11
+font pango:JetBrainsMono 10
 
 exec --always dex --autostart --environment i3
 exec --always xss-lock -- i3lock -n
@@ -58,3 +59,9 @@ bar {
         status_command i3status
         position top
 }
+
+# Gaps
+gaps inner 10
+gaps outer 5
+smart_gaps on
+default_border pixel 1

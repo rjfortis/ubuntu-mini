@@ -14,6 +14,6 @@ sudo apt install -y \
   brightnessctl xfce4-power-manager policykit-1-gnome \
   network-manager xdg-utils dbus-x11 xdg-desktop-portal-gtk \
   dex xdotool htop curl wget rsync zip unzip p7zip-full p11-kit libvulkan1 \
-  fonts-dejavu fonts-font-awesome fonts-noto-color-emoji fonts-liberation fonts-inter
+  fonts-dejavu fonts-font-awesome fonts-noto-color-emoji fonts-liberation fonts-ubuntu
 
 sudo apt update && sudo apt install -y spice-vdagent
