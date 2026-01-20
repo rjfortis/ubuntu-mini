@@ -2,7 +2,6 @@ set $mod Mod4
 
 #font pango:Inter 10
 
-exec --always xrandr --output Virtual-1 --mode 1920x1080
 exec --always dex --autostart --environment i3
 exec --always xss-lock -- i3lock -n
 exec --always nm-applet
