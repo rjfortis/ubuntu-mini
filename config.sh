@@ -7,6 +7,13 @@ mkdir -p ~/.config/dunst
 
 curl -o ~/.config/i3/config https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/i3/config
 
+cat <<EOF > ~/.xprofile
+#!/bin/sh
+xrandr --output Virtual-1 --mode 1920x1080
+EOF
+
+chmod +x ~/.xprofile
+
 cat <<EOF > ~/.config/alacritty/alacritty.toml
 [window]
 opacity = 1.0
