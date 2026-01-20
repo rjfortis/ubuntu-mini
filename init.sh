@@ -15,3 +15,5 @@ sudo apt install -y \
   network-manager xdg-utils dbus-x11 xdg-desktop-portal-gtk \
   dex xdotool htop curl wget rsync zip unzip p7zip-full p11-kit libvulkan1 \
   fonts-dejavu fonts-font-awesome fonts-noto-color-emoji fonts-liberation fonts-inter
+
+sudo apt update && sudo apt install -y spice-vdagent
