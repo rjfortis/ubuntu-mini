@@ -9,13 +9,9 @@ sudo apt install -y \
   alacritty rofi picom feh lxappearance arandr \
   thunar gvfs gvfs-backends udiskie thunar-archive-plugin tumbler \
   dunst libnotify-bin \
-  firefox chromium-browser \
+  firefox \
   flameshot viewnior xclip \
   brightnessctl xfce4-power-manager policykit-1-gnome \
   network-manager xdg-utils dbus-x11 xdg-desktop-portal-gtk \
-  dex xdotool fastfetch htop curl wget rsync zip unzip p7zip-full p11-kit libvulkan1 \
+  dex xdotool htop curl wget rsync zip unzip p7zip-full p11-kit libvulkan1 \
   fonts-dejavu fonts-font-awesome fonts-noto-color-emoji fonts-liberation fonts-inter
-
-systemctl --user --now enable pipewire pipewire-pulse wireplumber
-
-sudo systemctl enable lightdm
