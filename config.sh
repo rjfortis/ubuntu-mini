@@ -4,8 +4,6 @@ mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/picom ~/.config/dunst
 
 curl -sL https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/fonts.sh | bash
 
-curl -sL https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/upwork.sh | bash
-
 curl -o ~/.config/i3/config https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/i3/config
 curl -o ~/.config/alacritty/alacritty.toml https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/alacritty/alacritty.toml
 curl -o ~/.config/picom/picom.conf https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/picom/picom.conf
