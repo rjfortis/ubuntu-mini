@@ -9,7 +9,7 @@ sudo apt install -y \
   alacritty rofi feh lxappearance arandr \
   thunar gvfs gvfs-backends udiskie thunar-archive-plugin tumbler \
   dunst libnotify-bin \
-  firefox \
+  firefox chromium \
   flameshot viewnior xclip \
   brightnessctl xfce4-power-manager policykit-1-gnome \
   network-manager xdg-utils dbus-x11 xdg-desktop-portal-gtk \
