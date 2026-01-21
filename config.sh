@@ -4,10 +4,12 @@ mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/picom ~/.config/dunst
 mkdir -p ~/Downloads ~/Documents ~/Pictures ~/Videos ~/Music ~/Desktop
 
 curl -sL https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/fonts.sh | bash
+curl -sL https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/dev.sh | bash
 
 curl -o ~/.config/i3/config https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/i3/config
 curl -o ~/.config/alacritty/alacritty.toml https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/alacritty/alacritty.toml
-curl -o ~/.config/picom/picom.conf https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/picom/picom.conf
+
+# curl -o ~/.config/picom/picom.conf https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/picom/picom.conf
 
 cat <<EOF > ~/.xprofile
 #!/bin/sh
