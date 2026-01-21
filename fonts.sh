@@ -1,12 +1,14 @@
 #!/bin/bash
 
-FONT_DIR="$HOME/.local/share/fonts"
-mkdir -p "$FONT_DIR"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip
 
-URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip"
+unzip JetBrainsMono.zip -d ~/JetBrainsMono
 
-wget -q --show-progress "$URL" -O /tmp/jb.zip
-unzip -o /tmp/jb.zip -d "$FONT_DIR"
-rm /tmp/jb.zip
+mkdir -p ~/.local/share/fonts
+
+mv ~/JetBrainsMono/*.ttf ~/.local/share/fonts/
 
 fc-cache -fv
+
+rm JetBrainsMono.zip
+rm -rf ~/JetBrainsMono

@@ -6,7 +6,7 @@ sudo apt install -y \
   xorg xinit lightdm lightdm-gtk-greeter \
   i3-wm i3status i3lock xss-lock \
   pipewire pipewire-audio-client-libraries pipewire-pulse pipewire-alsa wireplumber pavucontrol \
-  alacritty rofi picom feh lxappearance arandr \
+  alacritty rofi feh lxappearance arandr \
   thunar gvfs gvfs-backends udiskie thunar-archive-plugin tumbler \
   dunst libnotify-bin \
   firefox \

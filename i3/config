@@ -1,8 +1,6 @@
 set $mod Mod4
 
-font pango:JetBrainsMono 10
-
-workspace_layout default
+font pango:JetBrainsMono 11
 
 exec --always dex --autostart --environment i3
 exec --always xss-lock -- i3lock -n
@@ -17,6 +15,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 bindsym $mod+Shift+e exec i3-msg exit
 bindsym $mod+u exec upwork
+bindsym $mod+n exec alacritty -e nvim
+bindsym $mod+z exec ~/.local/bin/zed
+bindsym $mod+Shift+t exec --no-startup-id ~/.config/i3/layout-terminals.sh
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
@@ -55,15 +56,50 @@ bindsym $mod+Shift+3 move container to workspace number 3
 bindsym $mod+Shift+4 move container to workspace number 4
 bindsym $mod+Shift+5 move container to workspace number 5
 
+bindsym $mod+Shift+a resize shrink width 10px
+bindsym $mod+Shift+s resize grow width 10px
+bindsym $mod+Shift+z resize shrink height 10px
+bindsym $mod+Shift+x resize grow height 10px
+
 bindsym $mod+Shift+r restart
 
-gaps inner 10
-gaps outer 5
 
-for_window [class=".*"] border pixel 2
-for_window [class="Upwork"] floating enable
+# STYLE
+
+# --- Window Decoration ---
+#default_border pixel 2
+#default_floating_border pixel 2
+#hide_edge_borders none
+default_border normal 0
+default_floating_border normal 0
+for_window [class="Alacritty"] border normal 0
+
+gaps inner 8
+gaps outer 0
+
+# --- Color Scheme (Tokyo Night High Contrast) ---
+# class                 border  bg      text    indicator child_border
+client.focused          #7aa2f7 #7aa2f7 #1a1b26 #bb9af7   #7aa2f7
+client.unfocused        #24283b #24283b #414868 #24283b   #24283b
+client.focused_inactive #24283b #24283b #414868 #24283b   #24283b
+client.urgent           #f7768e #f7768e #ffffff #f7768e   #f7768e
+
+# EXIT MENU
+set $mode_system System (l) logout, (r) reboot, (s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3-msg exit, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym s exec --no-startup-id systemctl poweroff, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+0 mode "$mode_system"
+
 
 bar {
         status_command i3status
         position top
 }
+
