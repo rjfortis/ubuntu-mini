@@ -16,5 +16,8 @@ sudo apt install -y \
   dex xdotool htop curl wget rsync zip unzip p7zip-full p11-kit libvulkan1 \
   fonts-dejavu fonts-font-awesome fonts-noto-color-emoji fonts-liberation fonts-ubuntu
 
-sudo apt update && sudo apt install -y xdg-user-dirs spice-vdagent
+# xdg-user-dirs fix snaps access to /home directory
+# spice-vdagent for better VM experience
+# ripgrep for nvim lazyvim searching strings
+sudo apt update && sudo apt install -y xdg-user-dirs spice-vdagent ripgrep
 xdg-user-dirs-update
