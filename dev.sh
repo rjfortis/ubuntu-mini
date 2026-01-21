@@ -22,3 +22,16 @@ sleep 0.5
 
 curl -f https://zed.dev/install.sh | sh
 sleep 0.5
+
+git config --global user.email "rjfortisdev@gmail.com"
+git config --global user.name "Ricardo Fortis"
+sleep 0.5
+
+# Manual Steps Reminder
+echo ""
+echo "=========================================================="
+echo "MANUAL STEPS REQUIRED:"
+echo "Generate SSH Key: ssh-keygen -t ed25519 -C \"rjfortisdev@gmail.com\""
+echo "Add the public key to your GitHub account"
+echo "cat ~/.ssh/id_ed25519.pub"
+echo "=========================================================="
