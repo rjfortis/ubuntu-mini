@@ -17,16 +17,15 @@ eval "$(fnm env)"
 fnm install --lts
 sleep 0.5
 
-# install zed code editor
-curl -f https://zed.dev/install.sh | sh
-sleep 2
+sudo pacman -S code
+sleep 1
 
 # install LazyVim
 mv ~/.config/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 sleep 0.5
-#curl -o ~/.config/nvim/lua/config/keymaps.lua https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/nvim/keymaps.lua
+curl -o ~/.config/nvim/lua/config/keymaps22.lua https://raw.githubusercontent.com/rjfortis/ubuntu-mini/main/nvim/keymaps.lua
 #sleep 0.5
 
 # Manual Steps Reminder
